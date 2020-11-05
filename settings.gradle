@@ -1,0 +1,3 @@
+include ':AddressSelector'
+include ':app'
+rootProject.name = "AddressSelector"

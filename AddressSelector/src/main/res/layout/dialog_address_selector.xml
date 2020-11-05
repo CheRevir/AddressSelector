@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dialog_address_selector_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/please_selector_address"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/dialog_address_selector_iv_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_margin="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog_address_selector_tv_name_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:lines="1"
+        android:text="@string/please_selector"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_address_selector_tv_title" />
+
+    <TextView
+        android:id="@+id/dialog_address_selector_tv_name_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:lines="1"
+        android:text="@string/please_selector"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_address_selector_tv_name_1"
+        app:layout_constraintStart_toEndOf="@id/dialog_address_selector_tv_name_1"
+        app:layout_constraintTop_toTopOf="@id/dialog_address_selector_tv_name_1" />
+
+    <TextView
+        android:id="@+id/dialog_address_selector_tv_name_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:lines="1"
+        android:text="@string/please_selector"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_address_selector_tv_name_2"
+        app:layout_constraintStart_toEndOf="@id/dialog_address_selector_tv_name_2"
+        app:layout_constraintTop_toTopOf="@id/dialog_address_selector_tv_name_2" />
+
+    <TextView
+        android:id="@+id/dialog_address_selector_tv_name_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:lines="1"
+        android:text="@string/please_selector"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_address_selector_tv_name_3"
+        app:layout_constraintStart_toEndOf="@id/dialog_address_selector_tv_name_3"
+        app:layout_constraintTop_toTopOf="@id/dialog_address_selector_tv_name_3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dialog_address_selector_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        app:layout_constraintTop_toBottomOf="@id/dialog_address_selector_tv_name_1" />
+
+    <ProgressBar
+        android:id="@+id/dialog_address_selector_pb"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
