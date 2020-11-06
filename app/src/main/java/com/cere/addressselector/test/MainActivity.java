@@ -3,6 +3,7 @@ package com.cere.addressselector.test;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements OnAddressSelector
     }
 
     @Override
-    public boolean onAddressSelected(String[] address) {
+    public boolean onAddressSelected(@NonNull String[] address) {
         Log.e("TAG", "MainActivity -> onAddressSelected: " + Arrays.toString(address));
         return false;
     }

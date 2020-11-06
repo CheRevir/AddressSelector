@@ -7,7 +7,7 @@
 
 ```groovy
 dependencies {
-    implementation 'com.cere:addressselector:1.0.0'
+    implementation 'com.cere:addressselector:1.0.1'
 }
 ```
 

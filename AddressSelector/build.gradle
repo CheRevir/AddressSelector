@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.library'
 }
-apply from: '../bintray.gradle'
 
 android {
     compileSdkVersion 30
@@ -35,3 +34,5 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'com.google.code.gson:gson:2.8.6'
 }
+
+apply from: '../bintray.gradle'

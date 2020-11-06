@@ -5,7 +5,7 @@ def siteUrl = 'https://github.com/CheRevir/AddressSelector'    // # 项目的主
 def gitUrl = 'git@github.com:CheRevir/AddressSelector.git'    // # Git仓库的url
 def issueUrl = 'https://github.com/CheRevir/AddressSelector/issues' // # Git仓库issues的url
 
-def artifact_version='1.0.0' //groupId
+def artifact_version='1.0.1' //groupId
 def artifact_group = 'com.cere' // # 发布版本号
 def artifact_id = 'addressselector' // # artifactId
 def projectName = 'AddressSelector' // #这个是显示在bintray 仓库中的项目名字，一般可用项目名称

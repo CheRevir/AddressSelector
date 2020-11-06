@@ -1,5 +1,7 @@
 package com.cere.addressselector;
 
+import androidx.annotation.NonNull;
+
 /**
  * Created by CheRevir on 2020/11/5
  */
@@ -9,5 +11,5 @@ public interface OnAddressSelectorListener {
      * @param address 0  - 3 {"省", "市", "区", "镇"}
      * @return 是否关闭
      */
-    boolean onAddressSelected(String[] address);
+    boolean onAddressSelected(@NonNull String[] address);
 }
