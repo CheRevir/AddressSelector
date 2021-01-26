@@ -1,6 +1,5 @@
 package com.cere.addressselector;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -50,13 +49,6 @@ public class AddressSelectorDialog extends BottomSheetDialogFragment implements 
         return new AddressSelectorDialog();
     }
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        if (context instanceof OnAddressSelectorListener) {
-            mOnAddressSelectorListener = (OnAddressSelectorListener) context;
-        }
-    }
 
     @Nullable
     @Override
@@ -258,6 +250,11 @@ public class AddressSelectorDialog extends BottomSheetDialogFragment implements 
     private void sort(List<Address> list) {
         Collator collator = Collator.getInstance(Locale.CHINA);
         Collections.sort(list, (o1, o2) -> collator.compare(o1.getName(), o2.getName()));
+    }
+
+    public AddressSelectorDialog setOnAddressSelectorListener(OnAddressSelectorListener listener) {
+        mOnAddressSelectorListener = listener;
+        return this;
     }
 
     /**
